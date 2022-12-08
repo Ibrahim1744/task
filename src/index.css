@@ -1,13 +1,212 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+}
+/* general styles */
+h1{
+  color: #2D2D2D;
+}
+p{
+color: #1F1249;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-btn{
+  background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+  width: 450px;
+  height: 60px;
+  padding: 0px 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 18px #9CADF2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.welcome-page-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+height: 100vh;
+  width: 100%;
+  background: rgba(245, 247, 255, 0.85);
+}
+.welcome-img{
+  width: 40%;
+  height: 60%;
+
+}
+.welcome-img img{
+  height: 100%;
+width: 100%;
+border-radius: 10px;
+}
+.welcome-title{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.welcome-title h1{
+  font-size: 56px;
+  font-weight: 400;
+  color: #2D2D2D;
+}
+.welcome-title p{
+  width: 70%;
+  line-height: 1.5;
+  color: #1F1249;
+}
+
+
+
+/* signup */
+
+.signup-parent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+height: 100vh;
+  width: 100%;
+  background: rgba(245, 247, 255, 0.85);
+}
+.signup-img{
+  width: 40%;
+  height: 60%;
+}
+.signup-img img{
+  height: 100%;
+width: 100%;
+border-radius: 10px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.username{
+  position: relative;
+  display: flex;
+align-items: center;
+background-color: #fff;
+}
+.username .icon{
+
+  opacity: 0.8;
+  left: 2%;
+  width: 8%;
+  border-right: 1px solid gray;
+  color: #9CADF2;
+}
+.username input::placeholder{
+  color: #3B3B3B;
+  position: relative;
+
+}
+.username input{
+  padding: 8px 20px;
+border-radius: 10px;
+border: none;
+outline: none;
+background-color: white;
+width: 315px;
+height: 60px;
+}
+.create-acc{
+  color: #fff;
+}
+.warning{
+color: red;
+font-size: 11px;
+font-weight: 300;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+}
+
+.registered-email{
+  text-decoration: underline;
+}
+
+
+
+/* queries */
+
+@media (max-width:1170px) {
+  .welcome-page-parent{
+    flex-direction: column;
+    gap: 5%;
+  }
+  .welcome-img{
+    width: 100%;
+    height: 60%;
+  
+  }
+  .welcome-title{
+    height: 40%;
+    text-align: center;
+  }
+  .welcome-title p{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-btn{
+    margin-left: auto;
+    margin-right: auto;
+    width: 315px;
+  }
+  .signup-parent{
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5%;
+  }
+  .signup-img{
+    width: 100%;
+    height: 40%;
+  
+  }
+  .form{
+    text-align: center;
+  }
+  .form p{
+    width: 80%;
+margin-left: auto;
+margin-right: auto;
+  }
+  .username .icon{
+    width: 15%;
+  }
+}
+@media (max-width:500px) {
+  .username{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .username input{
+    width: 100%;
+  }
+  .username .icon{
+    width: 20%;
+  }
 }
